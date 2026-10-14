@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Products | Choco Heaven</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff8ef;
+  color: #382018;
+}
+
+header {
+  background: #2b1711;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: #e8bb70;
+  font-size: 27px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+}
+
+nav a:hover, nav a.active {
+  color: #e8bb70;
+}
+
+.page-header {
+  text-align: center;
+  padding: 60px 8% 20px 8%;
+}
+
+.page-header small {
+  color: #ad7944;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 10px 0;
+}
+
+.page-header p {
+  color: #8c7568;
+}
+
+section {
+  padding: 40px 8% 75px 8%;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 7px 25px #3d211015;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px #3d211025;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #e8bb70;
+  color: #2b1711;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 22px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.stars {
+  color: #f39c12;
+  font-size: 13px;
+}
+
+.rating-count {
+  color: #8c7568;
+  font-size: 11px;
+}
+
+.card p {
+  color: #806e62;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.price {
+  color: #874b26;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: #e8bb70;
+  color: #2b1711;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+.btn:hover {
+  background: #382018;
+  color: white;
+  transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  background: #2b1711;
+  color: white;
+  padding: 30px 15px;
+}
+
+footer p {
+  margin-top: 10px;
+  color: #ddc8b6;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 30px 7% 55px 7%;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">🍫 CHOCO HEAVEN</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <small>OUR COLLECTION</small>
+  <h1>Our Signature Chocolates</h1>
+  <p>Find your favourite flavour and treat yourself!</p>
+</div>
+
+<section>
+  <div class="products">
+
+    <!-- Product 1 -->
+    <div class="card">
+      <span class="badge">BEST SELLER</span>
+      <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80" alt="Signature Chocolate Bar">
+      <div class="card-content">
+        <h3>Signature Chocolate Bar</h3>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(4.9 / 120 reviews)</span>
+        </div>
+        <p>A delightful signature chocolate treat handcrafted for your sweetest moments.</p>
+        <div class="price">₹149</div>
+        <button class="btn" onclick="order('Signature Chocolate Bar')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="card">
+      <span class="badge">INTENSE</span>
+      <img src="https://images.unsplash.com/photo-1548907040-4d42f7b5d0c4?auto=format&fit=crop&w=800&q=80" alt="Dark Chocolate">
+      <div class="card-content">
+        <h3>70% Artisan Dark Chocolate</h3>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(4.8 / 95 reviews)</span>
+        </div>
+        <p>Rich cocoa flavour with deep, velvety notes for true chocolate connoisseurs.</p>
+        <div class="price">₹199</div>
+        <button class="btn" onclick="order('70% Artisan Dark Chocolate')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="card">
+      <span class="badge">LUXURY</span>
+      <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=800&q=80" alt="Chocolate Truffles">
+      <div class="card-content">
+        <h3>Velvet Chocolate Truffles</h3>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(5.0 / 140 reviews)</span>
+        </div>
+        <p>Soft, smooth, melt-in-your-mouth bites of pure chocolate luxury.</p>
+        <div class="price">₹249</div>
+        <button class="btn" onclick="order('Velvet Chocolate Truffles')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="card">
+      <span class="badge">CLASSIC</span>
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Milk Chocolate">
+      <div class="card-content">
+        <h3>Creamy Milk Chocolate</h3>
+        <div class="rating">
+          <span class="stars">★★★★☆</span>
+          <span class="rating-count">(4.7 / 82 reviews)</span>
+        </div>
+        <p>Rich, creamy sweetness designed for a little everyday happiness.</p>
+        <div class="price">₹179</div>
+        <button class="btn" onclick="order('Creamy Milk Chocolate')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="card">
+      <span class="badge">GIFT FAVORITE</span>
+      <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80" alt="Chocolate Gift Box">
+      <div class="card-content">
+        <h3>Royal Chocolate Gift Box</h3>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(4.9 / 210 reviews)</span>
+        </div>
+        <p>An exquisite assortment packaged thoughtfully for birthdays and special celebrations.</p>
+        <div class="price">₹399</div>
+        <button class="btn" onclick="order('Royal Chocolate Gift Box')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="card">
+      <span class="badge">POPULAR</span>
+      <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=800&q=80" alt="Assorted Chocolates">
+      <div class="card-content">
+        <h3>Assorted Celebration Pack</h3>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(4.8 / 115 reviews)</span>
+        </div>
+        <p>A handpicked collection of our finest assorted treats made for sharing with loved ones.</p>
+        <div class="price">₹299</div>
+        <button class="btn" onclick="order('Assorted Celebration Pack')">Order Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="logo">🍫 CHOCO HEAVEN</div>
+  <p>Crafted with love. Enjoyed with happiness.</p>
+  <p>© <span id="year"></span> Choco Heaven. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Add your WhatsApp number, including country code.
+// Example for India: 919876543210
+const whatsappNumber = "91XXXXXXXXXX";
+
+function order(product) {
+  if (!/^\d{10,15}$/.test(whatsappNumber)) {
+    alert("Please add your WhatsApp number to the website code first.");
+    return;
+  }
+
+  const message = "Hello Choco Heaven! I would like to order " + product + ".";
+  const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+</script>
+
+</body>
+</html>
